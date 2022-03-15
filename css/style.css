@@ -1,0 +1,89 @@
+:root {
+  --heading-font-size-xl: 5rem;
+  --heading-font-size-lg: 3.157rem;
+  --heading-font-size-md: 2.369rem;
+  --heading-font-size-sm: 1.777rem;
+  --heading-font-size-xs: 1.333rem;
+
+  --text-font-size-lg: 1.333rem;
+  --text-font-size-md: 1rem;
+  --text-font-size-sm: 0.75rem;
+
+  --spacing-10: 0.625rem;
+  --spacing-15: 0.9375rem;
+  --spacing-20: 1.25rem;
+  --spacing-30: 1.875rem;
+  --spacing-40: 2.5rem;
+  --spacing-80: 5rem;
+
+  /* Aliases / components */
+  --heading-display: var(--heading-font-size-xl);
+  --heading-2: var(--heading-font-size-md);
+  --heading-3: var(--heading-font-size-sm);
+
+  --text-lead: var(--text-font-size-lg);
+  --text-default: var(--text-font-size-md);
+  --text-small: var(--text-font-size-sm);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  font-size: var(--text-default);
+}
+
+h1,
+.heading-h1 {
+  font-size: var(--heading-display);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: var(--spacing-15);
+}
+
+h2,
+.heading-2 {
+  font-size: var(--heading-2);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: var(--spacing-30);
+  margin-bottom: var(--spacing-15);
+}
+
+h3,
+.heading-3 {
+  font-size: var(--heading-3);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.text-lead {
+  font-size: var(--text-lead);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.text-small {
+  font-size: var(--text-small);
+}
+
+article {
+  max-width: 65ch;
+  margin: var(--spacing-80) auto;
+}
+
+article p {
+  margin-block: var(--spacing-15);
+  color: #4b4b4b;
+}
+
+:is(h1, h2, h3, p):first-child,
+:is(h1, h2, h3) + * {
+  margin-top: 0;
+}
+
+:is(h1, h2, h3, p):last-child {
+  margin-bottom: 0;
+}
